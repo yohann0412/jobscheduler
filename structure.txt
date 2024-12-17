@@ -1,0 +1,40 @@
+distributed-job-scheduler/
+│
+├── backend/
+│   ├── scheduler/
+│   │   ├── scheduler.py
+│   │   └── algorithms.py
+│   ├── node_agent/
+│   │   ├── agent.py
+│   │   └── resource_monitor.py
+│   ├── job_submission/
+│   │   ├── api.py
+│   │   └── job_queue.py
+│   ├── fault_tolerance/
+│   │   ├── heartbeat.py
+│   │   └── recovery.py
+│   ├── performance/
+│   │   ├── metrics.py
+│   │   └── benchmarking.py
+│   ├── config.py
+│   ├── main.py
+│   └── requirements.txt
+│
+├── frontend/
+│   ├── src/
+│   │   ├── components/
+│   │   │   └── JobDashboard.tsx
+│   │   ├── services/
+│   │   │   └── jobService.ts
+│   │   └── App.tsx
+│   ├── package.json
+│   └── tsconfig.json
+│
+├── proto/
+│   └── job_scheduler.proto
+│
+├── tests/
+│   ├── test_scheduler.py
+│   └── test_node_agent.py
+│
+└── docker-compose.yml
