@@ -5,6 +5,7 @@ import time  # Ensure time is imported
 import traceback  # Add traceback for more detailed error logging
 from typing import Dict, Any
 from .job_queue import DistributedJobQueue
+from flask_cors import CORS
 
 class JobSubmissionAPI:
     """
@@ -12,6 +13,7 @@ class JobSubmissionAPI:
     """
     def __init__(self, job_queue: DistributedJobQueue):
         self.app = Flask(__name__)
+        CORS(self.app, resources={r"/*": {"origins": "*"}})  # Development only
         self.job_queue = job_queue
         self.logger = logging.getLogger('JobSubmissionAPI')
         
